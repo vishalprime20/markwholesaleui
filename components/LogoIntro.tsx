@@ -1,17 +1,18 @@
 "use client";
 
+import { withBase } from "@/lib/basePath";
 import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export const LOGO_WHITE = "/media/logos/MarkWholesale_logo_transparent_white.png";
-export const LOGO_DARK = "/media/logos/MarkWholesale_logo_transparent.png";
+export const LOGO_WHITE = withBase("/media/logos/MarkWholesale_logo_transparent_white.png");
+export const LOGO_DARK = withBase("/media/logos/MarkWholesale_logo_transparent.png");
 export const LOGO_INTRO_DURATION_MS = 3400;
 
 const FRAME_COUNT = 90;
 const FRAME_FPS = 30;
 
 function frameSrc(index: number) {
-  return `/media/logos/anim-alpha/_afr_${String(index).padStart(4, "0")}.png`;
+  return withBase(`/media/logos/anim-alpha/_afr_${String(index).padStart(4, "0")}.png`);
 }
 
 type LogoIntroProps = {

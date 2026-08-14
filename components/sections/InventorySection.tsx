@@ -4,7 +4,7 @@ import { SectionChapter, StaggerChildren } from "@/components/motion";
 import { SectionHeading } from "@/components/Reveal";
 import { inventoryProducts } from "@/lib/content";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { MediaImage as Image } from "@/components/MediaImage";
 
 export function InventorySection() {
   return (

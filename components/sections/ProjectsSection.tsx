@@ -3,7 +3,7 @@
 import { ParallaxElement, ScrollReveal, SectionChapter, StaggerChildren } from "@/components/motion";
 import { SectionHeading } from "@/components/Reveal";
 import { completedProjects, featuredProjects } from "@/lib/content";
-import Image from "next/image";
+import { MediaImage as Image } from "@/components/MediaImage";
 
 export function ProjectsSection() {
   return (

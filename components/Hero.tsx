@@ -6,7 +6,7 @@ import { MagneticLink } from "@/components/motion";
 import { hero, inventoryProducts } from "@/lib/content";
 import { useAnchorClick } from "@/lib/motion/useSmoothScrollTo";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import Image from "next/image";
+import { MediaImage as Image } from "@/components/MediaImage";
 import { useLayoutEffect, useRef, useState } from "react";
 
 type Product = (typeof inventoryProducts)[number];

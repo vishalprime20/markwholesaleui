@@ -1,5 +1,6 @@
 "use client";
 
+import { withBase } from "@/lib/basePath";
 import { motion, useReducedMotion } from "framer-motion";
 
 /**
@@ -31,7 +32,7 @@ export function HeroBackground() {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/media/backgrounds/hero-skyline.jpg"
+          src={withBase("/media/backgrounds/hero-skyline.jpg")}
           alt=""
           className="h-full w-full object-cover"
           draggable={false}
@@ -45,9 +46,9 @@ export function HeroBackground() {
         muted
         loop
         playsInline
-        poster="/media/backgrounds/hero-skyline.jpg"
+        poster={withBase("/media/backgrounds/hero-skyline.jpg")}
       >
-        <source src="/media/videos/hero-city.mp4" type="video/mp4" />
+        <source src={withBase("/media/videos/hero-city.mp4")} type="video/mp4" />
       </video>
 
       {/* Floating abstract steel beams — right */}
@@ -62,7 +63,7 @@ export function HeroBackground() {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/media/backgrounds/steel-abstract.jpg"
+          src={withBase("/media/backgrounds/steel-abstract.jpg")}
           alt=""
           className="h-full w-full object-contain drop-shadow-[0_0_48px_rgba(51,153,204,0.28)]"
           draggable={false}
@@ -81,7 +82,7 @@ export function HeroBackground() {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/media/backgrounds/steel-abstract.jpg"
+          src={withBase("/media/backgrounds/steel-abstract.jpg")}
           alt=""
           className="h-full w-full object-contain blur-[1px]"
           draggable={false}
@@ -96,7 +97,7 @@ export function HeroBackground() {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/media/backgrounds/steel-texture.jpg"
+          src={withBase("/media/backgrounds/steel-texture.jpg")}
           alt=""
           className="h-full w-full object-cover"
           draggable={false}

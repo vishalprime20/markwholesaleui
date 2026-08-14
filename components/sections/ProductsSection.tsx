@@ -9,7 +9,7 @@ import {
 } from "@/components/motion";
 import { SectionHeading } from "@/components/Reveal";
 import { productsDetail } from "@/lib/content";
-import Image from "next/image";
+import { MediaImage as Image } from "@/components/MediaImage";
 
 export function ProductsSection() {
   return (

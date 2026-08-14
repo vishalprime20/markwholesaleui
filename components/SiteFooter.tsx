@@ -2,6 +2,7 @@
 
 import { BrandMark } from "@/components/LogoIntro";
 import { FadeIn } from "@/components/motion";
+import Link from "next/link";
 
 export function SiteFooter() {
   return (
@@ -12,9 +13,9 @@ export function SiteFooter() {
         </FadeIn>
         <FadeIn delay={0.1} className="flex flex-col gap-1 text-sm text-muted sm:items-end">
           <p>Matels Trading Division</p>
-          <a href="/toonhub" className="transition hover:text-brand-bright">
+          <Link href="/toonhub" className="transition hover:text-brand-bright">
             Demo v2
-          </a>
+          </Link>
           <p>© {new Date().getFullYear()} Mark Wholesale Inc.</p>
         </FadeIn>
       </div>

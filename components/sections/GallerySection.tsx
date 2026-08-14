@@ -3,7 +3,7 @@
 import { ParallaxElement, SectionChapter, StaggerChildren } from "@/components/motion";
 import { SectionHeading } from "@/components/Reveal";
 import { galleryImages } from "@/lib/content";
-import Image from "next/image";
+import { MediaImage as Image } from "@/components/MediaImage";
 
 export function GallerySection() {
   return (

@@ -3,7 +3,7 @@
 import { FadeIn, ParallaxElement, PinOnDesktop, SectionChapter, SlideIn } from "@/components/motion";
 import { SectionHeading } from "@/components/Reveal";
 import { about } from "@/lib/content";
-import Image from "next/image";
+import { MediaImage as Image } from "@/components/MediaImage";
 
 export function AboutSection() {
   return (

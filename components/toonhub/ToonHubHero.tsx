@@ -4,6 +4,7 @@ import { HeroBackground } from "@/components/HeroBackground";
 import { ToonHubContactOverlay } from "@/components/toonhub/ToonHubContactOverlay";
 import { ToonHubMenu } from "@/components/toonhub/ToonHubMenu";
 import { ToonHubSlideCopy } from "@/components/toonhub/ToonHubSlideCopy";
+import { withBase } from "@/lib/basePath";
 import {
   GRAIN_BG,
   MARK_SLIDES,
@@ -127,7 +128,7 @@ export function ToonHubHero() {
   useEffect(() => {
     SLIDES.forEach((item) => {
       const img = new Image();
-      img.src = item.src;
+      img.src = withBase(item.src);
     });
   }, []);
 
@@ -310,7 +311,7 @@ export function ToonHubHero() {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={item.src}
+                  src={withBase(item.src)}
                   alt={item.label}
                   style={{
                     width: "100%",

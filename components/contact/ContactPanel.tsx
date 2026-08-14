@@ -2,7 +2,7 @@
 
 import { FadeIn, MagneticButton } from "@/components/motion";
 import { contact } from "@/lib/content";
-import Image from "next/image";
+import { MediaImage as Image } from "@/components/MediaImage";
 import { FormEvent, useState } from "react";
 
 export function ContactPanel({ idPrefix = "", compact = false }: { idPrefix?: string; compact?: boolean }) {

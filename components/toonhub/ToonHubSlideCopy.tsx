@@ -4,7 +4,7 @@ import { about, completedProjects, featuredProjects, galleryImages, hero, produc
 import { LOGO_WHITE } from "@/components/LogoIntro";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Image from "next/image";
+import { MediaImage as Image } from "@/components/MediaImage";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const titleClass =
