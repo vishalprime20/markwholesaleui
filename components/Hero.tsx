@@ -265,12 +265,12 @@ export function Hero({ introComplete = true }: HeroProps) {
                         }`}
                       >
                         <span className="relative block h-12 w-12 bg-black sm:h-14 sm:w-14">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img
+                          <Image
                             src={product.icon}
                             alt=""
-                            className="h-full w-full object-cover"
-                            draggable={false}
+                            fill
+                            className="object-cover"
+                            sizes="56px"
                           />
                         </span>
                       </span>
