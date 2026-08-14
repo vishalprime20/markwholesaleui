@@ -56,9 +56,7 @@ export function ToonHubContactOverlay({
           {contact.title}
         </h2>
 
-        <div className="min-h-0 flex-1">
-          <ContactPanel idPrefix="toonhub-" compact />
-        </div>
+        <div className="min-h-0 flex-1">{open ? <ContactPanel idPrefix="toonhub-" compact /> : null}</div>
       </div>
     </div>
   );

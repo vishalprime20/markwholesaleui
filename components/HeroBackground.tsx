@@ -2,12 +2,25 @@
 
 import { withBase } from "@/lib/basePath";
 import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 /**
  * Layered MCP-generated hero background with Ken Burns + floating steel graphics.
  */
-export function HeroBackground() {
+export function HeroBackground({ enableVideo = true }: { enableVideo?: boolean }) {
   const reduceMotion = useReducedMotion();
+  const [loadVideo, setLoadVideo] = useState(false);
+
+  useEffect(() => {
+    if (!enableVideo || reduceMotion) return;
+    const boot = () => setLoadVideo(true);
+    if (typeof window.requestIdleCallback === "function") {
+      const id = window.requestIdleCallback(boot, { timeout: 2000 });
+      return () => window.cancelIdleCallback(id);
+    }
+    const id = window.setTimeout(boot, 1600);
+    return () => window.clearTimeout(id);
+  }, [enableVideo, reduceMotion]);
 
   return (
     <div className="absolute inset-0 overflow-hidden" aria-hidden>
@@ -36,20 +49,23 @@ export function HeroBackground() {
           alt=""
           className="h-full w-full object-cover"
           draggable={false}
+          fetchPriority="high"
         />
       </motion.div>
 
-      {/* Fallback video under/over blend for extra life when available */}
-      <video
-        className="absolute inset-0 h-full w-full object-cover opacity-35 mix-blend-lighten"
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster={withBase("/media/backgrounds/hero-skyline.jpg")}
-      >
-        <source src={withBase("/media/videos/hero-city.mp4")} type="video/mp4" />
-      </video>
+      {loadVideo ? (
+        <video
+          className="absolute inset-0 h-full w-full object-cover opacity-35 mix-blend-lighten"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster={withBase("/media/backgrounds/hero-skyline.jpg")}
+        >
+          <source src={withBase("/media/videos/hero-city.mp4")} type="video/mp4" />
+        </video>
+      ) : null}
 
       {/* Floating abstract steel beams — right */}
       <motion.div
@@ -66,6 +82,8 @@ export function HeroBackground() {
           src={withBase("/media/backgrounds/steel-abstract.jpg")}
           alt=""
           className="h-full w-full object-contain drop-shadow-[0_0_48px_rgba(51,153,204,0.28)]"
+          loading="lazy"
+          decoding="async"
           draggable={false}
         />
       </motion.div>
@@ -85,6 +103,8 @@ export function HeroBackground() {
           src={withBase("/media/backgrounds/steel-abstract.jpg")}
           alt=""
           className="h-full w-full object-contain blur-[1px]"
+          loading="lazy"
+          decoding="async"
           draggable={false}
         />
       </motion.div>
@@ -100,6 +120,8 @@ export function HeroBackground() {
           src={withBase("/media/backgrounds/steel-texture.jpg")}
           alt=""
           className="h-full w-full object-cover"
+          loading="lazy"
+          decoding="async"
           draggable={false}
         />
       </motion.div>

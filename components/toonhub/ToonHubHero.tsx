@@ -126,13 +126,6 @@ export function ToonHubHero() {
   }, []);
 
   useEffect(() => {
-    SLIDES.forEach((item) => {
-      const img = new Image();
-      img.src = withBase(item.src);
-    });
-  }, []);
-
-  useEffect(() => {
     const update = () => setIsMobile(window.innerWidth < 640);
     update();
     window.addEventListener("resize", update);
@@ -233,7 +226,7 @@ export function ToonHubHero() {
       }}
     >
       <div className="relative w-full" style={{ height: "100vh", overflow: "hidden" }}>
-        <HeroBackground />
+        <HeroBackground enableVideo={false} />
         <div
           className="pointer-events-none absolute inset-0"
           style={{
@@ -313,6 +306,8 @@ export function ToonHubHero() {
                 <img
                   src={withBase(item.src)}
                   alt={item.label}
+                  decoding="async"
+                  fetchPriority={role === "center" ? "high" : "low"}
                   style={{
                     width: "100%",
                     height: "100%",

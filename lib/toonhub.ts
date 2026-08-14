@@ -13,7 +13,7 @@ export const MARK_SLIDES = [
     label: "Home",
     details:
       "Industrial wholesale supply for the concrete industry. Rebar and wire mesh supply.",
-    src: "/media/products/toonhub/bars.png",
+    src: "/media/products/toonhub/bars.webp",
     bg: "#081018",
     panel: "#0b1218",
   },
@@ -23,7 +23,7 @@ export const MARK_SLIDES = [
     label: "About Us",
     details:
       "Established 2011. North East’s vertically integrated industrial metal supply-chain — warehousing, processing, and distribution for commercial concrete.",
-    src: "/media/products/toonhub/wide-flange.png",
+    src: "/media/products/toonhub/wide-flange.webp",
     bg: "#0b1218",
     panel: "#121a24",
   },
@@ -33,7 +33,7 @@ export const MARK_SLIDES = [
     label: "Services",
     details:
       "Our market trading capacity on various metals. We mark-to-market industrial metals and lumber, managing position, credit, and cash flow in real time.",
-    src: "/media/products/toonhub/steel-tube.png",
+    src: "/media/products/toonhub/steel-tube.webp",
     bg: "#121a24",
     panel: "#1a2330",
   },
@@ -43,7 +43,7 @@ export const MARK_SLIDES = [
     label: "Products",
     details:
       "Hot carbon and alloy steel shapes — angle, beam, channel, plate, pipe, bar, tube — plus coated, galvanized, and deep-foundation specialty products.",
-    src: "/media/products/toonhub/channel.png",
+    src: "/media/products/toonhub/channel.webp",
     bg: "#1a2330",
     panel: "#243041",
   },
@@ -53,7 +53,7 @@ export const MARK_SLIDES = [
     label: "Deep Foundation",
     details:
       "Caisson pipe, H-pile beams, soldier pile, micropiles, tie-backs, support of excavation, wrakers, and threaded bar.",
-    src: "/media/products/toonhub/h-pile.png",
+    src: "/media/products/toonhub/h-pile.webp",
     bg: "#162433",
     panel: "#243041",
   },
@@ -63,7 +63,7 @@ export const MARK_SLIDES = [
     label: "Projects",
     details:
       "Northeast commercial concrete and deep-foundation jobs — Brooklyn, Manhattan, Queens superstructure and supply, including 54 Noll and Tangram Plaza.",
-    src: "/media/products/toonhub/pipe-pile.png",
+    src: "/media/products/toonhub/pipe-pile.webp",
     bg: "#10202c",
     panel: "#336699",
   },
@@ -73,7 +73,7 @@ export const MARK_SLIDES = [
     label: "Gallery",
     details:
       "Jobsite and mill photography — processed steel, foundation cages, and field deliveries across the Mark Wholesale network.",
-    src: "/media/products/toonhub/wide-flange.png",
+    src: "/media/products/toonhub/wide-flange.webp",
     bg: "#0d1822",
     panel: "#3399cc",
   },
